@@ -41,7 +41,7 @@ class Medicos extends \yii\db\ActiveRecord
             [['ibge', 'tem_clinica', 'status'], 'integer'],
             [['criado_em', 'atualizado_em'], 'safe'],
             [['CRM'], 'string', 'max' => 18],
-            [['Nome', 'email'], 'string', 'max' => 80],
+            [['Nome','Telefone', 'email'], 'string', 'max' => 80],
             [['Endereco', 'site', 'Imagem'], 'string', 'max' => 145],
             [['Bairro'], 'string', 'max' => 60],
             [['CRM'], 'unique'],
@@ -61,12 +61,14 @@ class Medicos extends \yii\db\ActiveRecord
             'Bairro' => Yii::t('app', 'Bairro'),
             'ibge' => Yii::t('app', 'Ibge'),
             'email' => Yii::t('app', 'Email'),
+            'Telefone' => Yii::t('app', 'Telefone'),
             'tem_clinica' => Yii::t('app', 'Tem Clinica'),
             'site' => Yii::t('app', 'Site'),
             'Imagem' => Yii::t('app', 'Imagem'),
             'criado_em' => Yii::t('app', 'Criado Em'),
             'atualizado_em' => Yii::t('app', 'Atualizado Em'),
             'status' => Yii::t('app', 'Status'),
+            
         ];
     }
 }
